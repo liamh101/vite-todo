@@ -1,0 +1,11 @@
+.vscode/*
+!.vscode/extensions.json
+.idea
+.npm
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.ash_history
