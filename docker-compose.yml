@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  node:
+    image: node:18-alpine3.15
+    ports:
+      - "5173:5173"
+      - "5174:5174"
+      - "4173:4173"
+    working_dir: /root/vite-todo
+    command: npm run dev
+    volumes:
+        - ./:/root
