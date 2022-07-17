@@ -1,5 +1,5 @@
 <template>
-  <li class="flex justify-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 mx-100" :class="{'checked': completed}"><input v-model="completed" type="checkbox"> {{message}} - {{added}}</li>
+  <li :class="{'checked': completed}"><input v-model="completed" type="checkbox"> {{message}} - {{added}}</li>
 </template>
 
 <script lang="ts">
@@ -15,6 +15,11 @@ export default defineComponent({
   props: {
     message: String,
     added: String,
+  },
+  methods: {
+    check() {
+      this.completed = !this.completed;
+    }
   }
 })
 </script>

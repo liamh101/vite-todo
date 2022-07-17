@@ -1,8 +1,8 @@
 <template>
   <div >
-    <ul class="mb-10">
-<!--      <li class="flex justify-center" v-for="item in items">{{item.name}}</li>-->
-          <todo-item v-for="item in items" :message="item.name" :added="item.added"/>
+    <ul class="">
+      <li class="flex justify-center" v-for="item in items">{{item.name}}</li>
+<!--          <todo-item v-for="item in items" :message="item.name" :added="item.added"/>-->
     </ul>
 
     <TodoForm @submitted="newItem" class="flex justify-center"></TodoForm>
@@ -37,5 +37,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
-
+  .no-bullets {
+    list-style-type: none;
+  }
 </style>

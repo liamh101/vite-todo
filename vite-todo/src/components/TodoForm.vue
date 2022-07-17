@@ -1,9 +1,9 @@
 <template>
   <form>
-    <input class="rounded-md" type="text" v-model="name" />
-    <button class="py-2 px-3 ml-5 bg-indigo-500 text-white text-sm font-semibold rounded-md shadow focus:outline-none" @click.prevent="submit">Submit</button>
+    <input type="text" v-model="name" />
+    <button class="" @click.prevent="submit">Submit</button>
 
-    <p v-if="error" v-text="error"></p>
+    <p v-if="error" class="todo-error" v-text="error"></p>
   </form>
 </template>
 
@@ -35,5 +35,11 @@ export default defineComponent({
 </script>
 
 <style scoped>
+  .button-margin {
+    margin-left: 5px;
+  }
 
+  .todo-error {
+    color: red;
+  }
 </style>
